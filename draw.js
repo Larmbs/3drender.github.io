@@ -1,4 +1,4 @@
-function drawDot(distance,x,y) {
+export function drawDot(distance,x,y) {
     let size = distance
     ctx.save();
 
@@ -13,7 +13,7 @@ function drawDot(distance,x,y) {
 }
 
 
-function drawLine(x1,y1,x2,y2,distance) {
+export function drawLine(x1,y1,x2,y2,distance) {
     let size = distance
 
     ctx.save();
@@ -32,5 +32,3 @@ function drawLine(x1,y1,x2,y2,distance) {
 
     ctx.restore();
 };
-
-export {drawDot, drawLine};
