@@ -1,4 +1,4 @@
-import {drawDot, drawLine} from './draw';
+import {drawDot, drawLine} from './draw.js';
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
