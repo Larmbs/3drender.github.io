@@ -1,27 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>      
+    <style>
+        .canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
 
-    <head>
-        
-        <meta charset="UTF-8"/>
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
-        <title> AcePixels | Canvas</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=B612+Mono&display=swap" rel="stylesheet">
+<body>
+    <canvas id="canvas" class="canvas"></canvas>
 
-    </head>
+    <script src="mapData.js"></script>
+    <script src="camera.js"></script>
+    <script src="draw.js"></script>
+    <script src="matrix.js"></script>
+    <script type="module" src="scripts.js"></script>
 
-    <body>
 
-        <canvas id="canvas" class="canvas"></canvas>
-
-    </body>
-
-    <script src="main.js"></script>
+</body>
 
 </html>
