@@ -56,23 +56,43 @@ const mapData = {
         face: [
           {
             vert1: 0,
-            vert2: 5,
-            vert3: 6
+            vert2: 3,
+            vert3: 2
           },
           {
-            vert1: 0,
+            vert1: 2,
             vert2: 5,
+            vert3: 0
+          },
+          {
+            vert1: 1,
+            vert2: 2,
             vert3: 3
           },
           {
-            vert1: 6,
+            vert1: 3,
+            vert2: 7,
+            vert3: 1
+          },
+          {
+            vert1: 7,
+            vert2: 6,
+            vert3: 4
+          },
+          {
+            vert1: 4,
+            vert2: 1,
+            vert3: 7
+          },
+          {
+            vert1: 0,
             vert2: 5,
             vert3: 4
           },
           {
             vert1: 4,
             vert2: 6,
-            vert3: 1
+            vert3: 0
           },
           {
             vert1: 2,
@@ -80,39 +100,19 @@ const mapData = {
             vert3: 4
           },
           {
-            vert1: 6,
-            vert2: 0,
-            vert3: 3
-          },
-          {
-            vert1: 6,
-            vert2: 7,
-            vert3: 3
-          },
-          {
-            vert1: 3,
-            vert2: 2,
-            vert3: 5
-          },
-          {
-            vert1: 2,
-            vert2: 4,
-            vert3: 5
+            vert1: 4,
+            vert2: 5,
+            vert3: 2
           },
           {
             vert1: 7,
+            vert2: 3,
+            vert3: 0
+          },
+          {
+            vert1: 0,
             vert2: 6,
-            vert3: 1
-          },
-          {
-            vert1: 1,
-            vert2: 2,
-            vert3: 3
-          },
-          {
-            vert1: 1,
-            vert2: 7,
-            vert3: 3
+            vert3: 7
           }
         ]
       }

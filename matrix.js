@@ -10,11 +10,13 @@ const farPlane = 500;
 
 const q = farPlane/(farPlane-nearPlane)
 
+const cameraAngleX = 45;
 
 const projMatrix = [[a*f,0,0,0],[0,f,0,0],[0,0,q,1],[0,0,-nearPlane * q,0]]
 const A = Math.PI/6
 const rotateMatrixX = [[1,0,0],[0,Math.cos(A),-Math.sin(A)],[0,Math.sin(A),Math.cos(A)]]
-
+const roatateMatrixY = [[Math.cos(A), 0, Math.sin(A)],[0,1,0],[-Math.sin(A), 0, Math.cos(A)]]
+const roatateMatrixZ = [[Math.cos(A), -Math.sin(A), 0],[Math.sin(A),Math.cos(A),0],[0, 0, 1]]
 
 function multiply(matrix1, matrix2) {
     if (matrix1[0].length !== matrix2.length) {
@@ -36,18 +38,40 @@ function multiply(matrix1, matrix2) {
   return result;
 }
 
-export function proj(matrix, Angle) {
-  let resMatrix = multiply(matrix, [[1,0,0],[0,Math.cos(Angle),-Math.sin(Angle)],[0,Math.sin(Angle),Math.cos(Angle)]])
-
-  resMatrix[0][2] += 800
-  let z = resMatrix[0][2]
-  resMatrix[0].push(1)
-  resMatrix = multiply(resMatrix, projMatrix);
-  resMatrix[0][0] /= z;
-  resMatrix[0][1] /= z;
-  
-  return resMatrix
+function rotateX(matrix, rotX) {
+  let res = multiply([matrix[0].slice(0,-1)], [[1,0,0],[0,Math.cos(rotX),-Math.sin(rotX)],[0,Math.sin(rotX),Math.cos(rotX)]])
+  res[0].push(1)
+  return res
 }
+
+function rotateY(matrix, rotY) {
+  let res = multiply([matrix[0].slice(0,-1)], [[Math.cos(rotY), 0, Math.sin(rotY)],[0,1,0],[-Math.sin(rotY), 0, Math.cos(rotY)]])
+  res[0].push(1)
+  return res
+}
+
+function rotateZ(matrix, rotZ) {
+  let res = multiply([matrix[0].slice(0,-1)], [[Math.cos(rotZ), -Math.sin(rotZ), 0],[Math.sin(rotZ),Math.cos(rotZ),0],[0, 0, 1]])
+  res[0].push(1)
+  return res
+}
+
+
+export function proj(matrix, rotX, rotY, rotZ) {
+  matrix = rotateX(matrix, rotX)
+  matrix = rotateY(matrix, rotY)
+  matrix = rotateZ(matrix, rotZ)
+
+  matrix[0][2] += 900
+  let z = matrix[0][2]
+  matrix = multiply(matrix, projMatrix);
+  matrix[0][0] /= z;
+  matrix[0][1] /= z;
+  
+  return matrix
+}
+
+
 
 export function rotate(matrix) {
   return multiply(matrix, rotateMatrixX)
