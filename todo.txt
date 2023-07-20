@@ -1,0 +1,47 @@
+cd /users/liam/Desktop/Ace\ Pixels\ Mk3/new\ code
+http-server
+
+
+links to images 
+
+1-https://i.ibb.co/djd4QJt/px-Art-1-copy-2.png
+2-https://i.ibb.co/3RcZRk1/px-Art-1-copy.png
+3-https://i.ibb.co/JxtwGgb/px-Art-1.png
+4-https://i.ibb.co/SRV0M3d/px-Art-2.png
+5-https://i.ibb.co/qJhk5Vf/px-Art-3.png
+6-https://i.ibb.co/PtgH00W/px-Art-4.png
+7-https://i.ibb.co/zRb8czd/px-Art-5.png
+8-https://i.ibb.co/zRb8czd/px-Art-5.png
+
+
+
+'https://i.ibb.co/djd4QJt/px-Art-1-copy-2.png',
+
+'https://i.ibb.co/3RcZRk1/px-Art-1-copy.png', 
+
+'https://i.ibb.co/JxtwGgb/px-Art-1.png',
+
+'https://i.ibb.co/SRV0M3d/px-Art-2.png',
+
+'https://i.ibb.co/qJhk5Vf/px-Art-3.png',
+
+'https://i.ibb.co/PtgH00W/px-Art-4.png',
+
+'https://i.ibb.co/zRb8czd/px-Art-5.png',
+
+'https://i.ibb.co/Y2CtJ3c/px-Art-6.png', 
+
+'https://i.ibb.co/djd4QJt/px-Art-1-copy-2.png',
+
+'https://i.ibb.co/3RcZRk1/px-Art-1-copy.png', 
+
+
+Modes for enemy plane
+-Chase mode(when far away get closer to target and shoot at it)
+-Surrond mode(Launch missles from a distance)
+
+
+i
+when below certain height plane will attempt to go straight up
+
+
